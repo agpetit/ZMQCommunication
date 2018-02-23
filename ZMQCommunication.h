@@ -56,10 +56,6 @@ class ZMQCommunication : public virtual sofa::core::objectmodel::BaseObject
   sofa::Data<sofa::helper::vector<sofa::helper::vector<Vec2d>> > d_positionsmatched;
   sofa::Data<sofa::helper::vector<sofa::helper::vector<int>> > d_suppress;
 
-  //////////////////////////////// Inherited from Base /////////////////////////////////
-  //virtual std::string getTemplateName() const {return templateName(this);}
-  //static std::string templateName(const ZMQCommunication<DataTypes>* = NULL);
-  /////////////////////////////////////////////////////////////////////////////////////
 
   ////////////////////////// Inherited from BaseObject ////////////////////
   virtual void init() override;
@@ -70,11 +66,6 @@ class ZMQCommunication : public virtual sofa::core::objectmodel::BaseObject
   /// Assign the field values stored in the given map of name -> value pairs
   //virtual void parseFields(const map<string,string*>& str) override;
   void handleEvent(sofa::core::objectmodel::Event *event);
-  /////////////////////////////////////////////////////////////////////////
-
-  ////////////////////////// Inherited from Controller ////////////////////
-  //virtual void onBeginAnimationStep(const double dt) override;
-  //virtual void onEndAnimationStep(const double dt) override;
   /////////////////////////////////////////////////////////////////////////
 
   void serialize(std::stringstream& s);
